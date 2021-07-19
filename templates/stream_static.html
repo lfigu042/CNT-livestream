@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Stream or Static feed</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../static/logo.png" alt="CNT4713" class="logo" />
+        <div class="form-input">
+            <form action="/static" method="POST">
+                <button name="static" type="submit" class="btn">static</button>
+            </form>
+
+            <form action="/stream" method="POST">
+                <button name="stream" type="submit" class="btn">stream</button>
+            </form>
+        </div>
+        <!-- <form action="/templates/static.html" method="POST">
+            <input type="submit" value="Static" class="btn" />
+            <input type="submit" value="Stream" class="btn" />
+        </form> -->
+    </div>
+
+    <!-- <div class="container">
+        <form action="http://127.0.0.1:5501/templates/static.html">
+            <input type="submit" value="Static" class="btn" />
+        </form>
+
+        <form action="http://127.0.0.1:5501/templates/stream.html">
+            <input type="submit" value="Stream" class="btn" />
+    </div> -->
+</body>
+
+</html>
