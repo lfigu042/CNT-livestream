@@ -23,7 +23,7 @@ def play():
 def stream():
     return render_template('stream.html')
 
-@app.route('/stream_stati', methods=['POST'])
+@app.route('/stream_static', methods=['POST'])
 def back():
     return render_template('stream_static.html')
     
