@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/style.css" />
     <title>Live Stream</title>
 </head>
 <style>
@@ -43,6 +42,13 @@
     <div class="conainer">
         <div class="streamContainer">
             <video id="stream" src="http://87faa9caddaf.ngrok.io" type="video/ogg; codecs=theora" autoplay="autoplay" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-input">
+            <form action="/stream_static" method="POST">
+                <button name="stream_static" type="submit" class="btn">back</button>
+            </form>
         </div>
     </div>
 </body>
