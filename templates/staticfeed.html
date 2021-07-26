@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Signed in as: {{name}}</h1>
+    <br>
+    <video controls>
+      <source src="./static/static.mp4" type="video/mp4">
+      Video not supported.
+    </video>
+    <br><br>
+    <a class='btn btn-secondary' href="{{url_for('index')}}" role="button">Back</a>
+{% endblock %}

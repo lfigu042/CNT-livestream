@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1><strong>Signed-in as: {{name}}!</strong></h1>
+  <a class="btn btn-secondary" href="{{url_for('static_feed')}}" role="button">Static Video</a>
+  <br><br>
+  <a class="btn btn-secondary" href="{{url_for('live_feed')}}" role="button">Live Stream</a>
+
+{% endblock %}

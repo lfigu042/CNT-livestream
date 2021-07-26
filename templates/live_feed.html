@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1><strong>Signed-in as: {{name}}!</strong></h1>
+    <h2><strong>Dont mind the lag</strong></h2>
+    <div class="conainer">
+       <img src="http://67973b978e23.ngrok.io/video_feed" width="50%">
+       <br><br>
+       <a class='btn btn-secondary' href="{{url_for('index')}}" role="button">Back</a>
+   </div>
+{% endblock %}
