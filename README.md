@@ -12,6 +12,20 @@ The website is <a href="https://cnt-webstream.herokuapp.com/">here</a> and it wa
 </ul>
 
 I would like to thank Jose Hernandez for his constant assistance which led to the deployment of this project.
+<h2>Step 0: Understand how everything works</h2>
+The front-end HTML files are inside the 'templates' folder. 
+'base.HTML' contains the "<head>" tags, the Bootstrap stylesheet import, and the start of the Flask setup for dividing the pages.
+
+All the other HTML files extend the base.HTML and each have the contents for each different site within our website.
+
+'app.py' takes care of rendering the HTML files only if Google OAth was accepted. Flask provides the framework for the website.
+
+'webcamserver.py' uses OpenCV to capture the camera stream and route it to /video_feed through a specified host and port.
+
+Next, Ngrok will be used to expose that specified local server port to the Internet.
+
+Finally, the project will be uploaded to Heroku to be deployed.
+
 <h2>Step 1: Download Project & Set-Up Your Python Environment</h2>
 
 Download the code from this repo.
