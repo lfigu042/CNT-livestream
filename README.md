@@ -6,7 +6,7 @@ The website is <a href="https://cnt-webstream.herokuapp.com/">here</a> and it wa
 <ul>
 	<li>Python/Flask/OpenCV</li>
 	<li>HTML/CSS/Bootstrap</li>
-	<li>OAuth: Google</li>
+	<li>Google OAuth</li>
 	<li>Ngrok</li>
 	<li>Heroku</li>
 </ul>
@@ -30,6 +30,7 @@ Activate the environement:
 
 <h2>Step 2: Download the requirements</h2>
 Adding to step 1 (Note that if you get a red error, run the requirement command again):
+
 ```
 pip install -r requirements.txt
 ```
@@ -47,6 +48,7 @@ Note: "placeholder" will be updated later.
 <h2>Step 4: Create and write to .env file</h2>
 Create a file in root project directory called '.env' (can easily be done in VS Code)
 Add the credentials from step 3:
+
 ```
 CLIENT_ID=
 CLIENT_SECRET=
@@ -80,15 +82,18 @@ Type 127.0.0.1:8888/video_feed in browser and livestream should be working
 
 # Set up Ngrok
 Create <a href="https://ngrok.com/">NGROK</a> account.
+
 Note your <a href="https://dashboard.ngrok.com/get-started/your-authtoken">Authtoken.</a> 
+
 Download <a href="https://ngrok.com/download">NGROK.</a>.
+
 Run ngrok.exe and type:
 ```
-ngrok authtoken placeholder
+ngrok authtoken pastetokenhere
 ```
 for MAC:
 ```
-./ngrok authtoken placeholder
+./ngrok authtoken pastetokenhere
 ```
 # Ngrok video stream
 Next, stream the video (still in ngrok console):
@@ -109,7 +114,7 @@ line 8 <img src="http://randomstring.ngrok.io/video_feed" width="50%">
 ```
 note: make sure to add the /video_feed to the string.
 
-Repeat the 'run locally' instructions where the livestream should now work. (still dont end ngrok)
+Repeat the 'run locally' instructions where the livestream should now work. (still don't end ngrok)
 
 # Set up Heroku
 Create <a href="http://www.heroku.com/">Heroku</a> account.
@@ -119,13 +124,15 @@ Enter a name for the website (ex: CNT4713LiveStream)
 Return to Google OAuth and replace the 'placeholder' with the new website name. (this change wont alter the credentials)
 # Deploy to Heroku
 The Website is now ready to go live.
+
 Comment back lines 3 and 4 from the "app.py" file.
+
 Delete (or move to different folder) the .gitignore file from the project root directory.
 
 Upload the project to Heroku to allow the website to go live:
 ```
 cd projectDirectory
-conda activate webstream
+.\venv\Scripts\activate
 Heroku login
 git init
 heroku git:remote -a MYHEROKUNAME
@@ -138,7 +145,7 @@ On Heroku's dashboard, click  'open app' and everything should be up and running
 Note: Since NGROK will change the randomstring each time it's run, step 'Ngrok video stream' must be repeated (except the 'run locally' step). Then upload the changes to Heroku:
 ```
 cd projectDirectory
-conda activate webstream
+.\venv\Scripts\activate
 Heroku login
 git add .
 git commit -am “message”
